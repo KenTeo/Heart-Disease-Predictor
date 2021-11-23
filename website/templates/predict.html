@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Heart Failure Prediction</title>
+		<link rel="stylesheet" href="static/styles.css"/>
+	</head>
+	<!-- Body -->
+    <body>
+		<div class="results">
+		<h2 class="results_heading">Heart Failure Prediction</h2>
+			{% if prediction>=0.8 %}
+				<h1 class="bad_output">Prediction: Very High Risk of Heart Disease!!!</h1>
+			{% elif prediction>=0.6 %}
+				<h1 class="bad_output">Prediction: High Risk of Heart Disease!!</h1>
+			{% elif prediction>=0.4 %}
+				<h1 class="bad_output">Prediction: Medium Risk of Heart Disease!</h1>
+			{% elif prediction<0.2 %}
+				<h1 class="good_output">Prediction: Low Risk of Heart Disease</h1>
+			{% elif prediction>=0.0 %}
+				<h1 class="good_output">Prediction: Very Low Risk of Heart Disease</h1>
+			{% endif %}
+			{% if restingbp > 129 and prediction>=0.4 %}
+				<h1 class="recommendation">Recommendation: Please take blood thinning medication and have a healthy diet to reduce your blood pressure.</h1>
+			{% endif %}
+			{% if cholesterol > 221 and prediction>=0.4 %}
+				<h1 class="recommendation">Recommendation: Please take medication and less fatty or processed food to reduce your cholesterol.</h1>
+			{% endif %}
+			{% if fastingbs == 1 and prediction>=0.4 %}
+				<h1 class="recommendation">Recommendation: Please take insulin medication and have a healthy diet to reduce your blood sugar level.</h1>
+			{% endif %}
+			{% if restingbp > 129 or cholesterol > 221 or fastingbs == 1 or prediction>=0.4%}
+				<h1 class="recommendation">General recommendation: You are advise to exercise more frequently to keep yourself fit.</h1>
+				<img src="static/exercise.jpg" class="img" width=500px height=300px>
+			{% endif %}
+		</div>
+	</body>
+</html>
