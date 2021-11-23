@@ -1,6 +1,7 @@
 # Heart disease predictor and Prescriptive recommendation
 #### 1. *Create a model to predict the likelihood of a person having heart Disease.*
 #### 2. *Provide recommendation for patients to reduce heart disease risk.*
+
 See the project deployed in the following website: 
 https://heart-disease-advisor.herokuapp.com/
 ---
@@ -89,23 +90,30 @@ ___
 The summary of the key findings from the data.
 #### Numerical variables
 ![image](https://drive.google.com/uc?export=view&id=1Pnro2-DO441NzYw0YjpLCJ7lSFHOVFBe)
+
 From the correlation heatmap above, we can see that for numerical variables, maximum heart rate and old peak has the highest correlation to Heart disease.
 #### Categorical variables
 **Histogram plot of Chest Pain Type**
 ![image](https://drive.google.com/uc?export=view&id=16bzYtit6kGNGmVSxN6K9l80b3Ysb6HHc)
+
 |                                   | ATA | NAP | ASY | TA |
 |-----------------------------------|-----|-----|-----|----|
 |Probability of having Heart Disease|14%  |35%  |79%  |43% |
+
 **Histogram plot of Exercise Angina**
 ![image](https://drive.google.com/uc?export=view&id=1f3X5RDh3w1-bY9Oz9hDhyyUJ0jJD-Ush)
+
 |                                   | No Exercise Angina | Have Exercise Angina |
 |-----------------------------------|--------------------|----------------------|
 |Probability of having Heart Disease|35%                 |85%                   |
+
 **Histogram plot of ST Slope**
 ![image](https://drive.google.com/uc?export=view&id=1beHArcPb0L57GFUTT16KwLQhO2rOhaqq)
+
 |                                   | Up | Flat | Down |
 |-----------------------------------|-----|-----|-----|
 |Probability of having Heart Disease|20%  |83%  |78%  |
+
 ___
 <a name="prepare"></a>
 ## Prepare the data for modelling
