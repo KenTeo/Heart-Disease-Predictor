@@ -138,7 +138,9 @@ The following is the pre-processing for the data:
 - Pipeline is build for Scaling and One Hot encoder with the classifier to prevent data leakage.
 
 The result or the testing of the algorithem with 10-fold cross-validation is shown below.
+
 ![image](https://drive.google.com/uc?export=view&id=1a0zdgjCAFjaMBxSWQE_2jOl0jWHzCpry)
+
 From the table above, XGBoost has the highest accuracy score(highest score mean). Hence, it will be chosen as the final model. 
 
 *Note: As the dataset is very small(918 samples) we will not be able to see full the power of the XGBoost algorithm but in a actual project where we are able to collect more data. The accuracy score of the XGBoost algorithm will be much higher than other algorithm as shown above.
@@ -150,8 +152,8 @@ ___
 ## Predicting of data and providing recommendation
 Using the predict_proba() function, we are able to obtain the predicted probability of having heart disease.
 The likelihood of heart disease for the new sample is broken down into 5 groups.
-They are very low risk(0~0.2), low risk(0.2~0.4), medium risk(0.4~0.6), high risk(0.6~0.8) and very high risk(0.8~1).
 The numbers from 0~1 represents the probability output of the XGBoost algorithm where a number closer to 1 means higher probability that there is heart disease and 0 is likely to have no heart disease.
+
 ![image](https://drive.google.com/uc?export=view&id=1_6IjQJSFxve8ff-Sm4hjLqdv-FEOKUVf)
 
 #### Recommendation for User
